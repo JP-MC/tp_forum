@@ -1,0 +1,45 @@
+﻿Réalisation Forum
+
+-> Inscription / Connexion
+-> Droits d’utilisation (Admin, Modérateur, Utilisateur simple)
+
+-> Utilisateur simple : 
+    -> Peut créer un sujet (de discussion)
+    -> Peut poster sur un sujet
+    -> Peut éditer ses posts
+-> Peut supprimer ses posts
+
+-> Modérateur :
+-> Peut créer un sujet
+    -> Peut poster sur un sujet
+-> Peut éditer ses posts
+    -> Peut supprimer des posts
+
+-> Admin :
+-> Peut créer un sujet
+-> Peut supprimer un sujet
+    -> Peut poster sur un sujet
+-> Peut éditer des posts
+    -> Peut supprimer des posts
+
+-> Pagination des sujets de discussion
+-> Lorsque l’on créé un sujet de discussion : Titre(sujet) de la discussion et Post de départ obligatoire !
+-> La date de création, le nom du créateur et le nombre de posts s’affichent dans chaque sujet de la liste 
+
+-> Poster sur un sujet affiche la date et le nom de l’utilisateur qui l’a posté (Pour la date : http://php.net/manual/fr/function.date.php )
+
+
+
+-> Bonus: 
+     - Mettre les sujets dans des catégories définie à l’avance ( Exemple pour un forum développeur: Catégories PHP, Javascript, C, C++... ect. ) et trier les sujets par catégories !
+    -> L’admin peut alors créer des catégories
+    - Possibilité de clore un sujet pour les admins et les modérateurs
+
+===============================
+
+ Inscription
+ Créer / modifier / supprimer - un sujet
+=Créer / modifier / supprimer - un post
+ Pagination des sujets de discussion
+=retour à la page précédente
+=gestion des grants

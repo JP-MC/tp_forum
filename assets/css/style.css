@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+body{margin:0;padding:0;font-family:'Montserrat',Arial, Helvetica, sans-serif;}
+header{background-color:#000;color:#fff;padding:1em 2em;}
+footer{background-color:#000;color:#fff;padding:1em 2em;margin-top:2em;}
+.main-wrap{max-width:990px;margin:0 auto;}
+
+a{text-decoration:none;color:#0be6af;}
+a:hover{text-decoration:underline;}
+
+/* MENU */
+nav ol,nav ul{list-style-type:none;margin:0;padding:0;}
+nav a,nav a:hover{text-decoration:none;}
+#main-menu ul{display:flex;justify-content:flex-end;}
+#main-menu li a{display:block;padding:1em;font-weight:600;text-transform:uppercase;color:#000;transition:color 0.3s;}
+#main-menu li a:hover,#main-menu li a.current{color:#0be6af;}
+
+#category-menu ul{display:flex;flex-wrap:wrap;font-size:0.75em;}
+#category-menu ul li{padding-left:1em;}
+
+/* TABLEAUX */
+#category-list table,#topic-list table{border-collapse:collapse;border:1px solid #223;}
+#category-list table th,#topic-list table th{padding:0 1.4em;border:1px solid #223;background-color:#223;color:#fff;text-align:left;font-size:0.8em;font-weight:400;}
+#category-list table td,#topic-list table td{padding:0 1em;border:1px solid #ccc;}
+
+/*  */
+#topic h2{margin-bottom:0;}
+.topic-infos{margin:0 0 3em 0;font-size:0.85em;color:#223;}
+.post-infos{border-bottom:1px solid #223;font-size:0.75em;color:#aaa;}
+
+/* FORM */
+label{display:block;float:left;width:100px;}
+.error{color:#f00;font-weight:600;}
+.message{color:#0a0;font-weight:600;}
+
+.post_tools{float:right;}
+
+.delete-link{display:inline-block;padding:0.5em 1em;color:#fff;background-color:#000;font-size:0.85em;font-weight:600;}
+.delete-link:hover{color:#0be6af;}
+
+.border{border:1px solid #000;padding:0 1em;}

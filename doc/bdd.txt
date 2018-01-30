@@ -1,0 +1,37 @@
+
+user        	id_user / login / password / id_role
+role        	id_role / label
+permission		id_permission / label
+role_permission	id_role / id_permission
+
+category    	id_category / label
+topic       	id_topic / title / date_creation / id_user / id_category
+post        	id_post / content / date_creation / id_topic / id_user
+
+
+category    	id_category / label
+Carte mère
+Mémoire
+Processeur
+Carte graphique
+Boitier
+Alimentation
+Disque dur
+Disque SSD
+CD/DVD/BD
+Mini PC
+Matériels & problèmes divers
+Conseil d'achat
+
+role
+1 ADMINISTRATOR
+2 MODERATOR
+3 SUBSCRIBER
+
+permission
+1 CREATE_TOPIC
+2 CREATE_POST
+3 EDIT_POST
+4 EDIT_OWN_POST
+5 DELETE_POST
+6 DELETE_OWN_POST

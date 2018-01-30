@@ -1,0 +1,58 @@
+Pour rediriger j'ai besoin de connaitre : 
+page
+category (optionnel)
+topic (optionnel)
+
+Pages ou j'ai besoin de connaitre la page précédente :
+
+=add_post.php
+=edit_post.php
+=login.php
+
+=service_add_post.php
+=service_delete_post.php
+=service_edit_post.php
+=service_login.php
+=service_logout.php
+
+$_SESSION["QUERY_STRING"]	Page précédente
+$_SESSION["origin_page"]	Page d'origine
+
+'HTTP_REFERER' => string 'http://localhost/forum/?page=topic&topic=2'
+'REQUEST_METHOD' => string 'GET' (length=3)
+'QUERY_STRING' => string 'page=home' (length=9)
+'REQUEST_URI' => string '/forum/?page=home' (length=17)
+'PHP_SELF' => string '/forum/index.php'
+
+
+=====================================================================
+$_GET sanitizing
+
+/*
+ FILTER_SANITIZE_STRING removes most dangerous characters. That may 
+ not always be what you want. Read the PHP filters docs. 
+
+ We are also overwriting the $_GET array (the query string) with the sanitized
+ versions of these variables.
+*/
+
+$_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+
+/* 
+rebuild query string using white listed variables, 
+not $_GET to prevent variable injection as Mārtiņš Briedis 
+suggests above.
+*/
+
+$qv['liquor']  = $_GET['liquor'];
+$qv['mixer']   = $_GET['mixer'];
+$qv['garnish'] = $_GET['garnish'];
+
+# build and URL encode the query string using the above array.
+$querystring = http_build_query( $qv );
+
+=====================================================================
+Storage and output sanitizing
+
+SQL : mysqli_real_escape_string() (for each string stored in sql database)
+HTML : htmlspecialchars() : (every single echo or print statement should use htmlspecialchars)
